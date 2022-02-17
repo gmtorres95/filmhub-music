@@ -7,6 +7,7 @@ export default createGlobalStyle`
     outline: 0;
     box-sizing: border-box;
     font-family: Roboto;
+    color: #222;
   }
   body {
     background: #DDD;
