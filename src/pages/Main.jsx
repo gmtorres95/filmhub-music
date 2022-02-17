@@ -1,11 +1,13 @@
 import React from 'react';
-
 import styled from 'styled-components';
+
+import Genre from '../components/Genre';
 
 export default function Main() {
   return (
     <Wrapper>
       <Header>Filmhub Music</Header>
+      <Genre />
     </Wrapper>
   );
 }
