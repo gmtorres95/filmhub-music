@@ -8,6 +8,8 @@ export default function Main() {
     <Wrapper>
       <Header>Filmhub Music</Header>
       <Genre />
+      <Genre />
+      <Genre />
     </Wrapper>
   );
 }
