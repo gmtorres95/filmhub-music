@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Album from '../Album';
+import Album from './Album';
 
 export default function Genre({ name, albums }) {
   return (

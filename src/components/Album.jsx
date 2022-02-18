@@ -20,11 +20,19 @@ export default function Album({ info }) {
 
 const Wrapper = styled.a`
   margin: 24px 24px 24px 0px;
+
   * {
-    width: 160px;
+    width: 150px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+  }
+  img {
+    border-radius: 16px;
+    box-shadow: 8px 4px 8px #AAA;
+  }
+  &:hover {
+    filter: brightness(1.25);
   }
 `;
 
