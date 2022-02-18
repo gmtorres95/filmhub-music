@@ -39,7 +39,7 @@ export default function Main() {
       </Header>
       { searchResult ?
           <Genre name='Search Results:' albums={searchResult} /> :
-          genres.map((genre) => <Genre name={genre} albums={albums[genre]} />) }
+          genres.map((genre, i) => <Genre name={genre} albums={albums[genre]} key={i} />) }
     </Wrapper>
   );
 }

@@ -8,7 +8,7 @@ export default function Genre({ name, albums }) {
     <Wrapper>
       <GenreName>{name}</GenreName>
       <AlbumsContainer>
-        { albums.map((album) => <Album info={album} />) }
+        { albums.map((album) => <Album info={album} key={album.id} />) }
       </AlbumsContainer>
     </Wrapper>
   );
