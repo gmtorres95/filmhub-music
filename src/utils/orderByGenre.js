@@ -1,4 +1,4 @@
-function orderByGenre(albums, setAlbums) {
+function orderByGenre(albums, setAlbums, setGenres) {
   const genres = {};
 
   albums.forEach((album) => {
@@ -12,7 +12,10 @@ function orderByGenre(albums, setAlbums) {
     });
   })
 
+  delete genres["Music"];
+
   setAlbums(genres);
+  setGenres(Object.keys(genres));
 }
 
 export {

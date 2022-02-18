@@ -3,27 +3,12 @@ import styled from 'styled-components';
 
 import Album from '../Album';
 
-export default function Genre() {
+export default function Genre({ name, albums }) {
   return (
     <Wrapper>
-      <GenreName>Genre</GenreName>
+      <GenreName>{name}</GenreName>
       <AlbumsContainer>
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
+        { albums.map((album) => <Album info={album} />) }
       </AlbumsContainer>
     </Wrapper>
   );

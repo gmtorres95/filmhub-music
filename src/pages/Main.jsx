@@ -5,18 +5,19 @@ import { getAlbums } from '../services/albumsAPI';
 import Genre from '../components/Genre';
 
 export default function Main() {
-  const [albums, setAlbums] = useState();
+  const [albums, setAlbums] = useState(null);
+  const [genres, setGenres] = useState(null);
 
-  useEffect(() => {
-    getAlbums(setAlbums);
-  }, []);
+  useEffect(() => getAlbums(setAlbums, setGenres), []);
+
+  console.log(albums);
+
+  if(!albums || !genres) return <Header>Loading...</Header>
 
   return (
     <Wrapper>
       <Header>Filmhub Music</Header>
-      <Genre />
-      <Genre />
-      <Genre />
+      { genres.map((genre) => <Genre name={genre} albums={albums[genre]} />) }
     </Wrapper>
   );
 }
