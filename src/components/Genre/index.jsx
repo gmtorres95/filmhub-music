@@ -7,7 +7,7 @@ export default function Genre() {
   return (
     <Wrapper>
       <GenreName>Genre</GenreName>
-      <AlbunsContainer>
+      <AlbumsContainer>
         <Album />
         <Album />
         <Album />
@@ -24,7 +24,7 @@ export default function Genre() {
         <Album />
         <Album />
         <Album />
-      </AlbunsContainer>
+      </AlbumsContainer>
     </Wrapper>
   );
 }
@@ -38,7 +38,7 @@ const GenreName = styled.h2`
   font-weight: 500;
 `;
 
-const AlbunsContainer = styled.div`
+const AlbumsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;

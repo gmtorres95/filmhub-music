@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
+import { getAlbums } from '../services/albumsAPI';
 import Genre from '../components/Genre';
 
 export default function Main() {
+  const [albums, setAlbums] = useState();
+
+  useEffect(() => {
+    getAlbums(setAlbums);
+  }, []);
+
   return (
     <Wrapper>
       <Header>Filmhub Music</Header>
