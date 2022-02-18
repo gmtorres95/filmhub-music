@@ -45,7 +45,7 @@ export default function Main() {
 }
 
 const Wrapper = styled.div`
-  padding: 48px;
+  padding: 48px 48px 48px 48px;
 `;
 
 const Header = styled.div`

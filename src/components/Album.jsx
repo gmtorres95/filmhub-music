@@ -6,23 +6,27 @@ export default function Album({ info }) {
     name,
     artistName,
     url,
+    artistUrl,
   } = info;
   const artwork = info.artworkUrl100;
 
   return (
-    <Wrapper href={url}>
-      <img src={artwork} alt={name} />
-      <StyledText>{name}</StyledText>
-      <StyledText weight={400}>{artistName}</StyledText>
+    <Wrapper>
+      <a href={url}>
+        <img src={artwork} alt={name} />
+        <StyledText>{name}</StyledText>
+      </a>
+      <a href={artistUrl}>
+        <StyledText weight={400}>{artistName}</StyledText>
+      </a>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.a`
   margin: 24px 24px 24px 0px;
-
   * {
-    width: 150px;
+    width: 152px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -32,7 +36,12 @@ const Wrapper = styled.a`
     box-shadow: 8px 4px 8px #AAA;
   }
   &:hover {
-    filter: brightness(1.25);
+    margin: 20px 20px 20px -4px;
+    * {
+      width: 160px;
+      white-space: normal;
+      filter: brightness(1.10);
+    }
   }
 `;
 

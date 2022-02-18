@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Album from './Album';
 
 export default function Genre({ name, albums }) {
+  console.log(albums);
   return (
     <Wrapper>
       <GenreName>{name}</GenreName>
