@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { getAlbums } from '../services/albumsAPI';
 import Genre from '../components/Genre';
+import Loading from '../components/Loading';
 
 export default function Main() {
   const [albums, setAlbums] = useState(null);
@@ -12,7 +13,7 @@ export default function Main() {
 
   console.log(albums);
 
-  if(!albums || !genres) return <Header>Loading...</Header>
+  if(!albums || !genres) return <Loading />
 
   return (
     <Wrapper>
