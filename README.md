@@ -1,10 +1,8 @@
-# Filmhub Music
-
-<img src="https://github.com/gmtorres95/filmhub-music/blob/main/public/favicon.png" height="192px" />
+# <img src="./public/favicon.png" height="24px" /> Filmhub Music
 
 Enjoy the most famous albums of the moment  
 
-## Instruction
+## Instructions
 
 ### Clone the repository to your computer
 
